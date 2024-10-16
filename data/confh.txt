@@ -1,0 +1,29 @@
+{
+    "identity" :{
+        "name" : "chez moi",
+        "code" : "La maison",
+    },
+    "wifi" :{
+        "ssid" : "ARRIS-D752",
+        "pwd" : "391A1FE0BB36E3C0"
+    },
+    "network" :{
+        "ip" : "192.168.0.15",
+        "dns" : "8.8.8.8",
+        "gateway" : "192.168.0.1",
+        "netmask" : "255.255.255.0"
+    },
+    "NTP" : {
+        "server" : "1.pool.ntp.org",      // IP address or address name like 1.pool.ntp.org
+        "server_3" : "195.83.188.254",        // Always indicate 3 ntp servers
+        "server_2" : "fr.pool.ntp.org",           // can be the same one !
+        "gmtOffset" : 0,
+        "daylightOffset" : 0
+    },
+    "watchdog" : {
+        "reboot_time" : 1000,               // periodic reboot in seconds (1d=86400s)
+        "wifi_connect_timeout" : 40,        // *500ms (20 will last 10 sec) 
+        "ntp_connect_timeout" : 3,         // max retry number
+        "mqtt_connect_timeout" : 4         // max retry number
+    }
+}

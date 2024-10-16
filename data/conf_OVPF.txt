@@ -1,0 +1,31 @@
+{
+    "identity" :{
+        "name" : "Observatoire Volcanologique Fournaise",
+        "code" : "OVPF"    },
+    "wifi" :{
+        "ssid" : "OVPF",
+        "pwd" : "0vpf1pgp"
+    },
+    "network" :{
+        "ip" : "195.83.188.189",
+        "dns" : "8.8.8.8",
+        "gateway" : "195.83.188.254",
+        "netmask" : "255.255.255.128"
+    },
+    "NTP" : {
+        "server" : "195.83.188.254",        // Always indicate 3 ntp servers
+        "server_2" : "10.10.1.1",           // can be the same one !
+        "server_3" : "1.pool.ntp.org",      // IP address or address name like 1.pool.ntp.org
+        "gmtOffset" : 0,
+        "daylightOffset" : 0
+    },
+    "publication" : {
+        "period" : 60
+    },
+    "watchdog" : {
+        "reboot_time" : 86500,             // periodic reboot in seconds (1d=86400s)
+        "wifi_connect_timeout" : 40,       // *500ms (20 will last 10 sec) 
+        "ntp_connect_timeout" : 3,         // max retry number
+        "mqtt_connect_timeout" : 4         // max retry number
+    }
+}

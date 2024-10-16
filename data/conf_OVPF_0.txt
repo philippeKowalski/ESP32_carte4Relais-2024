@@ -1,0 +1,57 @@
+{
+    "wifi" :{
+        "ssid" : "OVPF",
+        "pwd" : "0vpf1pgp"
+    },
+    "network" :{
+        "ip" : "195.83.188.189",
+        "dns" : "8.8.8.8",
+        "gateway" : "195.83.188.254",
+        "netmask" : "255.255.255.128"
+    },
+    "NTP" : {
+        "server" : "195.83.188.254",        // Always indicate 3 ntp servers
+        "server_2" : "10.10.1.1",           // can be the same one !
+        "server_3" : "1.pool.ntp.org",      // IP address or address name like 1.pool.ntp.org
+        "gmtOffset" : 0,
+        "daylightOffset" : 0
+    },
+    "MQTT" : {
+        "server" : "195.83.188.43",
+        "port" : 1883,
+        "user" : "pluvio",
+        "password" : "pluvio_pwd",
+        "clientId" : "GPNW",
+        "pub" : "pluvio",
+        "sub" : "GPNW/commandes"
+    },
+    "identity" : {
+        "name" : "mon site OVPF",
+        "name" : "OVPF"
+    },
+    "sampling" : {
+        "period_1" : 1,
+        "period_2" : 3,
+        "period_3" : 60,
+        "Others" : 60
+    },
+    "watchdog" : {
+        "reboot_time" : 1000,               // periodic reboot in seconds (1d=86400s)
+        "wifi_connect_timeout" : 40,        // *500ms (20 will last 10 sec) 
+        "ntp_connect_timeout" : 3,         // max retry number
+        "mqtt_connect_timeout" : 4         // max retry number
+    },
+    "PCNT" : {
+        "PCNT_FREQ_UNIT": 0,
+        "PCNT_H_LIM_VAL" : 10000,
+        "PCNT_FILTER_VAL" : 1000,
+        "RAIN_METER_PIN" : 4,
+        "PulseCounter" : 0,
+        "DiffPulse" : 0,
+        "OverFlowCounter" : 0
+    },
+    "analog" : {
+        "windDirection": 34
+    }
+    
+}

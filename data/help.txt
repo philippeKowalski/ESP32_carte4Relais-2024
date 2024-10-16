@@ -1,0 +1,48 @@
+Commandes disponibles via telnet :
+
+help        Affiche cette aide
+  ?         Idem help
+
+***** interactions systeme *****
+bye, exit      Deconnection telnet
+reboot         Reboot ESP32 (after 3 seconds)
+ping           Retourne 'ping'
+df             Retourne l'espace disque disponible
+ls             Liste le contenu du file system SPIFFS
+ipCfg, ip      Retourne IP_address, IP_gateway, IP_subnet
+
+***** manipulation fichiers *****
+rm nf          Effacement du fichier 'nf'
+mv snf dnf     Renome le fichier snf en dnf
+   (attention il faut indiquer le '/' en debut du nom)
+more nf        Retourne le contenu du fichier specifie 
+   (attention il faut indiquer le '/' en debut du nom)
+
+****** Configuration *****
+infoCfg        Affiche la signification des parametres de conf
+getCfg         Retourne la configuration active
+
+set param value         : affecte 'value' au parametre 'param'
+   set idName value     >> affecte value au parametre identity/name
+   set idCode value     >> affecte value au parametre identity/code
+
+   set ssid value       >> affecte value au parametre wifi/ssid
+   set password value   >> affecte value au parametre wifi/pwd
+   
+   set ip value         >> affecte value au parametre network/ip
+   set gateway value    >> affecte value au parametre network/gateway
+   set netmask value    >> affecte value au parametre network/netmask
+   
+   set ntpServer value  >> affecte value au parametre NTP/server
+   
+   set rebootPeriod value  >> affecte value au parametre identity/name
+
+saveCfg nf     Sauvegarde la configuration actuelle dans le fichier 'nf'
+   (attention il faut indiquer le '/' en debut du nom)
+
+***** gestion de la date et de l'heure *****
+date                          Retourne date et heure courantes
+time                          Retourne l'heure courante
+setRTC yyyy,mm,dd,hh,mm,ss    Mise à l'heure de la RTC
+setNTP                        Demande une mise à l'heure NTP
+

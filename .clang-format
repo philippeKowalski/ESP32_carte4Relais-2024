@@ -1,0 +1,6 @@
+---
+BasedOnStyle: Google
+AlignTrailingComments: "true"
+MaxEmptyLinesToKeep: "2"
+ReflowComments: "false"
+ColumnLimit: 0

@@ -1,0 +1,31 @@
+Informations de configuration
+
+Le fichier de configuration contient un enregistrement au format JSON 
+avec les commentaires autorises
+
+Section "identity" : Configuration Wifi
+        "name" : Nom du site d'installation 
+        "code" : Nom de code du site d'installation 
+
+Section "wifi" : Configuration Wifi
+        "ssid" : Ssid du reseau 
+        "pwd" : Mot de passe de connexion au reseau
+
+Section "network" : Configuration reseau
+        "ip" : Adresse IPV4 de l'instrument
+        "dns" : adresse IP V4 du DNS a utiliser
+        "gateway" : Adresse IP de la passerelle
+        "subnet" : masque de sous-reseau
+
+Section "NTP" : Configuration NTP
+        "server"   : Premier serveur NTP interroge
+        "server_2" : Second serveur NTP interroge
+        "server_3" : Troisième serveur NTP interroge
+        "gmtOffset" : Decalage heurelocale/GMT (heure)
+        "daylightOffset" : Decalage hivers/ete
+
+Section "watchdog" : Chien de garde
+        "reboot_time" : Periode de reboot obligatoire (secondes)
+        "wifi_connect_timeout" : Timeout connection wifi (20 will last 10 sec) 
+        "ntp_connect_timeout" : Timeouttentative MAH NTP avant reboot  // max retry number
+        "mqtt_connect_timeout" : Timeout connection au brocker MQTT    // max retry number
